@@ -69,12 +69,20 @@ export default function Header() {
 
   return (
     <>
-      <header className="w-full p-5 bg-[#2A53C1]">
-        <section className="space-y-5 ">
-          <div className="flex text-white justify-between items-center">
+      <header className="w-full p-5 bg-[#2A53C1] ">
+        <section className="space-y-5 md:flex md:flex-row md:justify-between">
+          <div className="flex text-white justify-between items-center md:space-x-5">
             <Link href={"/"}>
               <Globe size={27} />
             </Link>
+
+            <div className="space-x-4">
+              <Link href={"/"}>Home</Link>
+              <Link href={"/about"}>About</Link>
+              <Link href={"/contact"}>Contact</Link>
+              <Link href={"/advertise"}>Advertise</Link>
+              <Link href={"/provacy-policy"}>Privacy Policy</Link>
+            </div>
             {LinksIcons}
 
             {MenuTrigger}
@@ -89,8 +97,8 @@ export default function Header() {
         </section>
       </header>
 
-      <section className="flex lg:flex-row lg:gap-5 justify-center lg:mr-20 text-left md:text-4xl lg:text-5xl flex-col mx-auto font-extrabold text-3xl px-5 py-3 space-y-1">
-        <h1 className="text-7xl md:text-8xl lg:text-9xl">GlobalSeven</h1>
+      <section className="flex lg:flex-row lg:gap-5 justify-center lg:mr-20 text-left sm:text-3xl md:text-4xl lg:text-5xl flex-col mx-auto font-extrabold text-2xl px-5 py-3 space-y-1">
+        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl">GlobalSeven</h1>
         <h2 className="ml-1 lg:w-18">News & Opinion Blog</h2>
       </section>
     </>

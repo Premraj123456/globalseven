@@ -3,7 +3,7 @@
 import Image from "next/image";
 import PageTitleCard from "../components/pageTitleCard";
 import { blue_color } from "../utils";
-import { Instagram, Linkedin, Twitter, X, XCircle } from "lucide-react";
+import { Facebook, Instagram, Linkedin, LucideTwitter, Twitter, X, XCircle, Youtube } from "lucide-react";
 
 
 export default function About() {
@@ -24,7 +24,7 @@ Join us on this exciting journey as we continue to explore, report, and connect 
 
     <p className={`text-[${blue_color}] font-bold text-2xl`}> Me</p>
 
-    <Image className="py-5" src={"/prem.jpg"} height={200} width={200} />
+    <Image className="py-5" src={"/prem.jpg"} height={300} width={300} />
     <p className={`text-[${blue_color}] font-bold text-xl`}> Founder & Website Manager</p>
     
     <div className="space-y-4 mt-2 ">
@@ -42,6 +42,27 @@ Join us on this exciting journey as we continue to explore, report, and connect 
 
     </div>
 
+    <p className={`text-[${blue_color}] font-bold text-2xl mt-9`}> Brother</p>
+
+    <Image className="py-5" src={"/grace.jpeg"} height={300} width={300} />
+    <p className={`text-[${blue_color}] font-bold text-xl`}>Co-Founder</p>
+    
+    <div className="space-y-4 mt-2 ">
+
+      <div className="space-y-1">
+      <p className="font-[ProximaNova]"> Grace Raj Paul</p>
+      <p className="font-[ProximaNova]"> gracerajpaul1@gmail.com</p>
+      {/* <p className="font-[ProximaNova]"> +917036024586</p> */}
+      </div>
+
+    <span className="flex gap-3">
+      <a href="https://instagram.com/gracerajpaul/"><Instagram size={21}/></a>
+      {/* <a href="https://www.facebook.com/share/1BqAKRPxoF/"><Facebook  size={21}/></a> */}
+      <a href="https://twitter.com/gracerajpaul/"><LucideTwitter  size={21}/></a>
+      <a href="https://youtube.com/@gracerajpaul/"><Youtube  size={21}/></a>
+    </span>
+
+    </div>
 
     <Image className="py-5" src={"/logo.jpg"} height={200} width={200} />
     <p className={`text-[${blue_color}] font-bold text-xl`}> GlobalSeven | Logo</p>
