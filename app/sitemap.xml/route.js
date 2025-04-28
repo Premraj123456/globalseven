@@ -19,7 +19,7 @@ const COLLECTION_ID = "posts"
 
 async function getAllPosts() {
   const response = await databases.listDocuments(DATABASE_ID, COLLECTION_ID, [
-    Query.limit(1000000000), // <-- get up to 10k posts
+    Query.limit(10000000), // <-- get up to 10k posts
   ]);
   return response.documents;
 }
