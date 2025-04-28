@@ -17,7 +17,7 @@ const COLLECTION_ID = "posts"
 
 export async function GET() {
     const documents = await databases.listDocuments(DATABASE_ID,COLLECTION_ID, [
-        Query.limit(15)
+        Query.limit(25), Query.orderDesc('$createdAt')
     ])
     // console.log(documents.documents)
    
