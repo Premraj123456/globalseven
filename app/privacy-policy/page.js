@@ -45,8 +45,8 @@ export default function PrivacyPolicy() {
 
             return (
                 <div key={i}>
-                    <h2 key={i} className="font-[HelveticaCustom] text-lg pb-5">{data_object.title}</h2>
-                    <p>{data_object.info.map((text) => <p className="pb-5">{text}</p>)}</p>
+                    <h2 className="font-[HelveticaCustom] text-lg pb-5">{data_object.title}</h2>
+                    <p>{data_object.info.map((text, i2) => <p key={i2} className="pb-5">{text}</p>)}</p>
                 </div>
         )
             
