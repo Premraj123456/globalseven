@@ -76,7 +76,7 @@ export default function Header() {
               <Globe size={27} />
             </Link>
 
-            <div className="space-x-4">
+            <div className="space-x-4 hidden md:block">
               <Link href={"/"}>Home</Link>
               <Link href={"/about"}>About</Link>
               <Link href={"/contact"}>Contact</Link>
