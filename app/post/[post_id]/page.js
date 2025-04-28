@@ -16,11 +16,11 @@ import Head from "next/head";
 export default async function Post({ params }) {
     const { post_id } = await params; // Destructure post_id from params
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'; // Use your site's URL here
+    const baseUrl = 'https://globalseven.in'; // Use your site's URL here
     const url = `${baseUrl}/api/post?id=${post_id}`;
     const response = await fetch(url);
     const postData = await response.json();
-    const domain = "localhost:3000"
+    const domain = "globalseven.in"
 
     const logichash = (object_info) => {
 
@@ -57,7 +57,7 @@ export default async function Post({ params }) {
 
                         <article className="">
                             <h1 className="font-bold text-3xl">{postData['title']}</h1>
-                            <Image alt="img" className="my-6" width={500} height={500} src={postData['image_url']} />
+                            <Image alt={postData['title']} className="my-6" width={500} height={500} src={postData['image_url']} />
                             <p className="font-[ProximaNova]">
                                 {postData['ai_content_list'].map((object_info, index) => {
                                     if (object_info["sub-heading"]) {

@@ -1,12 +1,21 @@
 import Image from "next/image";
 import HomeCard from "./components/homeCard";
 import HomePostCard from "./components/homePostCard";
-import next from "next";
 
 export default async function Home() {
 
-  const response = await fetch("http://localhost:3000/api/latest-posts", {next : {revalidate : 60}})
-  const list_of_posts = await response.json()
+  let list_of_posts = [];
+  try {
+    const response = await fetch("https://globalseven.in/api/latest-posts", {next: {revalidate: 60}});
+    if (!response.ok) {
+      throw new Error('Failed to fetch posts');
+    }
+    list_of_posts = await response.json();
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    // You can use default values or an empty array if the fetch fails
+    list_of_posts = [];
+  }
 
   const map_all_posts = list_of_posts.map((category, i1) => {
 
