@@ -3,7 +3,7 @@
 
 
 import { Client, Databases, Query } from "appwrite";
-import { NextResponse } from "next/server";
+
 const client = new Client()
 const databases = new Databases(client)
 
@@ -76,7 +76,7 @@ export async function GET() {
     ${postUrls}
   </urlset>`;
 
-  return new NextResponse(sitemap, {
+  return new Response(sitemap, {
     headers: {
       'Content-Type': 'application/xml',
     },
