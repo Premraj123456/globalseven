@@ -3,7 +3,7 @@
 
 
 import { Client, Databases, Query } from "appwrite";
-
+import { NextResponse } from "next/server";
 const client = new Client()
 const databases = new Databases(client)
 
@@ -18,10 +18,27 @@ const COLLECTION_ID = "posts"
 
 
 async function getAllPosts() {
-  const response = await databases.listDocuments(DATABASE_ID, COLLECTION_ID, [
-    Query.limit(10000000), // <-- get up to 10k posts
-  ]);
-  return response.documents;
+  let allPosts = [];
+  let lastId = null;
+  const limit = 100; // Max per Appwrite request
+
+  while (true) {
+    const queries = [Query.limit(limit)];
+    if (lastId) {
+      queries.push(Query.cursorAfter(lastId));
+    }
+
+    const response = await databases.listDocuments(DATABASE_ID, COLLECTION_ID, queries);
+    allPosts = allPosts.concat(response.documents);
+
+    if (response.documents.length < limit) {
+      break; // No more documents
+    }
+
+    lastId = response.documents[response.documents.length - 1].$id;
+  }
+
+  return allPosts;
 }
 
 
@@ -37,7 +54,7 @@ export async function GET() {
 
   const posts = await getAllPosts(); // fetch from Appwrite
 
-  console.log(posts)
+  // console.log(posts)
 
   const postUrls = posts.map((post) => `
   <url>
@@ -59,7 +76,7 @@ export async function GET() {
     ${postUrls}
   </urlset>`;
 
-  return new Response(sitemap, {
+  return new NextResponse(sitemap, {
     headers: {
       'Content-Type': 'application/xml',
     },
