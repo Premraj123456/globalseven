@@ -1,7 +1,6 @@
 import Image from "next/image";
 import HomeCard from "./components/homeCard";
 import HomePostCard from "./components/homePostCard";
-import Head from "next/head";
 
 export default async function Home() {
 
@@ -32,9 +31,7 @@ export default async function Home() {
 
   return (
     <main className="flex flex-col justify-center ">
-      <Head>
-        <meta name="yandex-verification" content="4645ed35986d0f0f" />
-      </Head>
+  
       <HomeCard />
 
       <ul className="p-6 space-y-3 mx-auto max-w-6xl">
