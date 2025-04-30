@@ -16,8 +16,8 @@ import Head from "next/head";
 export default async function Post({ params }) {
     const { post_id } = await params; // Destructure post_id from params
 
-    // const baseUrl = 'https://globalseven.in'; // Use your site's URL here
-    const baseUrl = 'http://localhost:3000'; // Use your site's URL here
+    const baseUrl = 'https://globalseven.in'; // Use your site's URL here
+    // const baseUrl = 'http://localhost:3000'; // Use your site's URL here
     
     const url = `${baseUrl}/api/post?id=${post_id}`;
     const response = await fetch(url);
