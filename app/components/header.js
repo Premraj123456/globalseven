@@ -19,9 +19,10 @@ import {
 
 import Link from "next/link";
 import { useRef, useState } from "react";
+import Image from "next/image";
 
 export const LinksIcons = (
-  <div className="flex gap-3">
+  <div className="flex gap-3 md:hidden">
     <a href="https://instagram.com/globalseven"><Instagram size={21} /></a>
     <a href="https://youtube.com/@globalseven"><Youtube size={21} /></a>
     <a href="https://twitter.com/globalseven"><Twitter size={21} /></a>
@@ -32,10 +33,10 @@ export const LinksIcons = (
 export const MenuTrigger = (
 
   <Sheet>
-  <SheetTrigger>
-    <Menu size={30} />
+  <SheetTrigger >
+    <Menu size={30} className="md:hidden"/>
   </SheetTrigger>
-  <SheetContent className="w-1/2">
+  <SheetContent className="w-1/2 ">
     <SheetHeader className="hidden">
       <SheetTitle></SheetTitle>
       <SheetDescription>
@@ -69,14 +70,15 @@ export default function Header() {
 
   return (
     <>
-      <header className="w-full p-5 bg-[#2A53C1] ">
-        <section className="space-y-5 md:flex md:flex-row md:justify-between">
+      <header className="w-full p-5 bg-[#2A53C1]  ">
+        <section className="space-y-5 md:space-y-0 md:flex md:flex-row md:justify-between ">
           <div className="flex text-white justify-between items-center md:space-x-5">
             <Link href={"/"}>
               <Globe size={27} />
+              
             </Link>
 
-            <div className="space-x-4 hidden md:block">
+            <div className="space-x-5 hidden md:block  ">
               <Link href={"/"}>Home</Link>
               <Link href={"/about"}>About</Link>
               <Link href={"/contact"}>Contact</Link>
@@ -88,7 +90,7 @@ export default function Header() {
             {MenuTrigger}
           </div>
 
-          <div href="https://www.google.com/search?q=site%3A%2F%2Fglobalseven.in+ " target="_blank" className="bg-white flex p-2.5 gap-3 text-lg font-semibold text-[#2A53C1] ">
+          <div href="https://www.google.com/search?q=site%3A%2F%2Fglobalseven.in+ " target="_blank" className="bg-white flex p-2.5 gap-3 text-lg font-semibold text-[#2A53C1]">
             <Search />
             {/* <input type="text">Search...</input> */}
             <input ref={inputRef} onChange={(e) => SetRender(e.target?.value)} className="w-full" type="search" name="search" id="search" placeholder="Search" />
@@ -97,9 +99,9 @@ export default function Header() {
         </section>
       </header>
 
-      <section className="flex lg:flex-row lg:gap-5 justify-center lg:mr-20 text-left sm:text-3xl md:text-4xl lg:text-5xl flex-col mx-auto font-extrabold text-2xl px-5 py-3 space-y-1">
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl">GlobalSeven</h1>
-        <h2 className="ml-1 lg:w-18">News & Opinion Blog</h2>
+      <section className="max-w-2xl lg:flex-row lg:gap-5 text-left sm:text-3xl md:text-3xl mx-auto font-extrabold text-2xl px-5 py-3 space-y-1 md:mt-3">
+        <h1 className="text-6xl sm:text-7xl md:text-8xl">GlobalSeven</h1>
+        <h2 className="ml-1">News & Opinion Blog</h2>
       </section>
     </>
   );

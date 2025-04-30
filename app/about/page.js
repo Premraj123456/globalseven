@@ -12,7 +12,7 @@ export default function About() {
     <PageTitleCard title="About Us" description="GlobalSeven delivers daily updates on tech, sports, gaming, and film. Stay informed with quality news when and where you want it." />
     <main className="px-5">
       
-    <p className="font-[ProximaNova] pb-8 ">
+    <p className="font-[ProximaNova] pb-8 text-lg ">
     Welcome to GlobalSeven, your go-to source for comprehensive and engaging news coverage across a range of exciting categories. At GlobalSeven, we are dedicated to bringing you the latest updates and in-depth stories on technology, sports, gaming, and film. Our mission is to provide high-quality news that keeps you informed and connected to the world’s most relevant events.
 <br /> <br />
 Founded by our visionary CEO, Prem Raj Paul, GlobalSeven is designed to cater to the diverse interests of our readers. Whether you’re a tech enthusiast, a sports fan, a gamer, or a film aficionado, we offer a wealth of content tailored to your passions. Our team of experienced journalists and editors work tirelessly to ensure that you receive timely, accurate, and engaging news from these dynamic fields.
@@ -29,7 +29,7 @@ Join us on this exciting journey as we continue to explore, report, and connect 
     
     <div className="space-y-4 mt-2 ">
 
-      <div className="space-y-1">
+      <div className="space-y-1 text-lg">
       <p className="font-[ProximaNova]"> Prem Raj Paul</p>
       <p className="font-[ProximaNova]"> premrajpaul9@gmail.com</p>
       <p className="font-[ProximaNova]"> +917036024586</p>
@@ -49,7 +49,7 @@ Join us on this exciting journey as we continue to explore, report, and connect 
     
     <div className="space-y-4 mt-2 ">
 
-      <div className="space-y-1">
+      <div className="space-y-1 text-lg">
       <p className="font-[ProximaNova]"> Grace Raj Paul</p>
       <p className="font-[ProximaNova]"> gracerajpaul1@gmail.com</p>
       {/* <p className="font-[ProximaNova]"> +917036024586</p> */}
@@ -70,7 +70,7 @@ Join us on this exciting journey as we continue to explore, report, and connect 
 
     <div className="space-y-4 mt-2 mb-8">
 
-      <div className="space-y-1">
+      <div className="space-y-1 text-lg">
       <p className="font-[ProximaNova]">Founded on 07-08-2024</p>
       <p className="font-[ProximaNova]">agapeloveapps@gmail.com</p>
       <p className="font-[ProximaNova]">Above Email is for Brand Collaboration and more.</p>

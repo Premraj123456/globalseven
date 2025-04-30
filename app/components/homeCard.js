@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function HomeCard() {
   return (
-    <section>
-        <div className="relative">
+    <section className="max-w-5xl md:hidden ">
+        <div className="relative ">
 
-                <Image className=" w-full brightness-90" src={"/city.jpg"} width={1000} height={1000} alt="city">
+                <Image className=" w-full brightness-90 " src={"/city.jpg"} width={1000} height={1000} alt="city">
                     
                 </Image>
 
@@ -20,7 +20,7 @@ export default function HomeCard() {
             
         </div>
 
-        <div className="bg-[#2A53C1] text-white px-5 py-3">
+        <div className="bg-[#2A53C1] text-white px-5 py-3 max-w-2xl">
             <h3 className=" text-xl">Latest Updates</h3>
             <h4 className="font-[ProximaNova] font-thin">Susan Wojcicki: A YouTube CEO has passed away on AUG 09, 2024</h4>
         </div>

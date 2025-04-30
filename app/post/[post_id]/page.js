@@ -16,12 +16,15 @@ import Head from "next/head";
 export default async function Post({ params }) {
     const { post_id } = await params; // Destructure post_id from params
 
-    const baseUrl = 'https://globalseven.in'; // Use your site's URL here
+    // const baseUrl = 'https://globalseven.in'; // Use your site's URL here
+    const baseUrl = 'http://localhost:3000'; // Use your site's URL here
+    
     const url = `${baseUrl}/api/post?id=${post_id}`;
     const response = await fetch(url);
     const postData = await response.json();
     const domain = "globalseven.in"
 
+    // console.log(postData)
     const logichash = (object_info) => {
 
         if (!object_info === undefined){
@@ -39,7 +42,7 @@ export default async function Post({ params }) {
         <>
             <PageTitleCard  title="Post" />
 
-            <main className="px-5 md:px-40 lg:px-60">
+            <main className="px-5 flex flex-col max-w-2xl">
                 {postData ? (
                     <>
                         {/* SEO and meta tags */}
@@ -57,8 +60,9 @@ export default async function Post({ params }) {
 
                         <article className="">
                             <h1 className="font-bold text-3xl">{postData['title']}</h1>
-                            <Image alt={postData['title']} className="my-6" width={500} height={500} src={postData['image_url']} />
-                            <p className="font-[ProximaNova]">
+                            <p className="mt-3 font-light opacity-70 ml-1 text-sm">{postData['time']} - {postData['category_name']}</p>
+                            <Image alt={postData['title']} className="my-6 m-w-2xl" width={1000} height={1000} src={postData['image_url']} />
+                            <p className="font-[ProximaNova] text-lg">
                                 {postData['ai_content_list'].map((object_info, index) => {
                                     if (object_info["sub-heading"]) {
                                         return (

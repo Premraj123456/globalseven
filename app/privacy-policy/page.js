@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
     <section className="p-6">
       <h1 className="font-bold text-black text-3xl mb-7">Privacy Policy</h1>
       
-      <p className="font-[ProximaNova] pb-8">Thank you for providing the additional information. Here's a more detailed privacy policy description for your news blog website:
+      <p className="font-[ProximaNova] pb-8 text-lg ">Thank you for providing the additional information. Here's a more detailed privacy policy description for your news blog website:
 <br /> <br />   At GlobalSeven, we understand the importance of privacy and are committed to protecting your personal information. This privacy outlines how we collect, use, and protect your data when you visit website.
 </p>
       <div className="font-[ProximaNova] ">
@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
             return (
                 <div key={i}>
                     <h2 className="font-[HelveticaCustom] text-lg pb-5">{data_object.title}</h2>
-                    <p>{data_object.info.map((text, i2) => <p key={i2} className="pb-5">{text}</p>)}</p>
+                    <p>{data_object.info.map((text, i2) => <p key={i2} className="pb-5 text-lg">{text}</p>)}</p>
                 </div>
         )
             
