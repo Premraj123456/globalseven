@@ -23,18 +23,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* Google Analytics Script */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-G5Q431YDBN"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-G5Q431YDBN');
-          `}
-        </Script>
+                
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5Q431YDBN"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-G5Q431YDBN');
+        </script>
       </head>
       <body
         className={`antialiased`}
