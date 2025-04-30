@@ -29,7 +29,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      
+      <body
+        className={`antialiased `}
+      >
         {/* Google Analytics Script */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-G5Q431YDBN"
@@ -43,10 +46,6 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-G5Q431YDBN');
           `}
         </Script>
-      </head>
-      <body
-        className={`antialiased `}
-      >
         <Header />
         {children}
         <Footer />
