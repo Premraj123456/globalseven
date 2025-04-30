@@ -2,6 +2,8 @@
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Head from "next/head";
+import Script from "next/script";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -21,18 +23,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         {/* Google Analytics Script */}
-                
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5Q431YDBN"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-G5Q431YDBN');
-        </script>
-      </head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-G5Q431YDBN"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-G5Q431YDBN');
+          `}
+        </Script>
+      </Head>
       <body
         className={`antialiased`}
       >
