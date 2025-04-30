@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
 
 
     return (
-    <section className="p-6">
+    <section className="p-6 mx-auto max-w-5xl">
       <h1 className="font-bold text-black text-3xl mb-7">Privacy Policy</h1>
       
       <p className="font-[ProximaNova] pb-8 text-lg ">Thank you for providing the additional information. Here's a more detailed privacy policy description for your news blog website:

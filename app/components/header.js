@@ -83,7 +83,7 @@ export default function Header() {
               <Link href={"/about"}>About</Link>
               <Link href={"/contact"}>Contact</Link>
               <Link href={"/advertise"}>Advertise</Link>
-              <Link href={"/provacy-policy"}>Privacy Policy</Link>
+              <Link href={"/privacy-policy"}>Privacy Policy</Link>
             </div>
             {LinksIcons}
 

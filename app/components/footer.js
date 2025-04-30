@@ -14,7 +14,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#172A47] space-y-8 text-white flex flex-col items-center text-lg font-bold p-6 w-full">
         
-        <div className="bg-[#172A47] space-y-8 text-white flex flex-col items-center text-lg font-bold p-6 w-full max-w-2xl">
+        <div className="bg-[#172A47] space-y-8 text-white flex flex-col items-center text-lg font-bold md:px-4 w-full max-w-2xl">
           <p>Subscribe to Our Newsletter</p>
 
         <div className="flex flex-col items-center w-full gap-3">

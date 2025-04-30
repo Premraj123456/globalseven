@@ -8,9 +8,9 @@ import { Facebook, Instagram, Linkedin, LucideTwitter, Twitter, X, XCircle, Yout
 
 export default function About() {
   return (
-    <>
+    <main className="mx-auto max-w-2xl">
     <PageTitleCard title="About Us" description="GlobalSeven delivers daily updates on tech, sports, gaming, and film. Stay informed with quality news when and where you want it." />
-    <main className="px-5">
+    <section className="px-5 ">
       
     <p className="font-[ProximaNova] pb-8 text-lg ">
     Welcome to GlobalSeven, your go-to source for comprehensive and engaging news coverage across a range of exciting categories. At GlobalSeven, we are dedicated to bringing you the latest updates and in-depth stories on technology, sports, gaming, and film. Our mission is to provide high-quality news that keeps you informed and connected to the world’s most relevant events.
@@ -79,8 +79,8 @@ Join us on this exciting journey as we continue to explore, report, and connect 
     </div>
   
 
-    </main>
+    </section>
 
-    </>
+    </main>
   );
 }
