@@ -20,6 +20,7 @@ import {
 import Link from "next/link";
 import { useRef, useState } from "react";
 import Image from "next/image";
+import { permanentMarker } from "../layout";
 
 export const LinksIcons = (
   <div className="flex gap-3 md:hidden">
