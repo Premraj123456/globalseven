@@ -22,11 +22,11 @@ export default function RootLayout({ children }) {
         {/* ✅ Google Analytics Script - Load in <head> via strategy */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-G5Q431YDBN"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
         <Script
           id="gtag-init"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
