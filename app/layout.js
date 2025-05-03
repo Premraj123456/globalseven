@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Script from "next/script";
+import GTag from './components/GTag';
 
 export const permanentMarker = Permanent_Marker({
   subsets: ['latin'],
@@ -20,24 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="antialiased">
         {/* ✅ Google Analytics Script - Load in <head> via strategy */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-G5Q431YDBN"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="gtag-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-G5Q431YDBN');
-              console.log("GA4 gtag script loaded!");
-
-            `,
-          }}
-        />
+        <GTag /> {/* 👈 Load GTAG manually */}
         <Header />
         {children}
         <Footer />
