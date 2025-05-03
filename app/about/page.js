@@ -24,7 +24,7 @@ Join us on this exciting journey as we continue to explore, report, and connect 
 
     <p className={`text-[${blue_color}] font-bold text-2xl`}> Me</p>
 
-    <Image className="py-5 w-full md:w-auto" src={"/prem.jpg"} height={300} width={300} />
+    <Image className="py-5" src={"/prem.jpg"} height={300} width={300} />
     <p className={`text-[${blue_color}] font-bold text-xl`}> Founder & Website Manager</p>
     
     <div className="space-y-4 mt-2 ">
@@ -44,7 +44,7 @@ Join us on this exciting journey as we continue to explore, report, and connect 
 
     <p className={`text-[${blue_color}] font-bold text-2xl mt-9`}> Brother</p>
 
-    <Image className="py-5 w-full md:w-auto" src={"/grace.jpeg"} height={300} width={300} />
+    <Image className="py-5" src={"/grace.jpeg"} height={300} width={300} />
     <p className={`text-[${blue_color}] font-bold text-xl`}>Co-Founder</p>
     
     <div className="space-y-4 mt-2 ">
@@ -64,7 +64,7 @@ Join us on this exciting journey as we continue to explore, report, and connect 
 
     </div>
 
-    <Image className="py-5 w-full md:w-auto" src={"/logo.jpg"} height={200} width={200} />
+    <Image className="py-5" src={"/logo.jpg"} height={200} width={200} />
     <p className={`text-[${blue_color}] font-bold text-xl`}> GlobalSeven | Logo</p>
     
 
