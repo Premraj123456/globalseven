@@ -18,7 +18,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      <body className="antialiased">
+        {/* ✅ Google Analytics Script - Load in <head> via strategy */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-G5Q431YDBN"
           strategy="beforeInteractive"
@@ -35,8 +36,6 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-      </head>
-      <body className="antialiased">
         <Header />
         {children}
         <Footer />
