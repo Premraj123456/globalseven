@@ -33,6 +33,8 @@ export default function RootLayout({ children }) {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-G5Q431YDBN');
+              console.log("GA4 gtag script loaded!");
+
             `,
           }}
         />
